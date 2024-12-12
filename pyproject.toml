@@ -1,0 +1,48 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "swissarmy"
+version = "0.0.1"
+authors = [{name="HanaPoulpe"}]
+description = "Hanapoulpe's Swissarmy tools"
+readme = "README.md"
+requires-python = "~=3.13"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Environment :: MacOS X",
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Operating System :: MacOS :: MacOS X",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Utilities",
+    "Typing :: Typed",
+]
+dependencies = [
+    "click"
+]
+
+[project.urls]
+Homepage = "https://github.com/HanaPoulpe/swissarmy"
+
+[project.optional-dependencies]
+dev = [
+    "pre-commit",
+    "pip-tools",
+    "invoke~=2.2.0",
+    "pytest",
+    "mypy",
+    "ruff",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/swissarmy"]
+
+[tool.pip-tools]
+generate-hashes = true
