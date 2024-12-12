@@ -53,7 +53,6 @@ Because all in all, it's time-consuming to start new stuff and I do that a lot.
 
 This will:
 * Install `python` with `pyenv`
-* Install other system dependencies
 * Build `swissarmy`
 * Install `swissarmy` from source
 
